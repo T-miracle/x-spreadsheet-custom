@@ -34,10 +34,18 @@ class DrawBox {
   setBorders({
     top, bottom, left, right,
   }) {
-    if (top) this.borderTop = top;
-    if (right) this.borderRight = right;
-    if (bottom) this.borderBottom = bottom;
-    if (left) this.borderLeft = left;
+    if (top) {
+      this.borderTop = top;
+    }
+    if (right) {
+      this.borderRight = right;
+    }
+    if (bottom) {
+      this.borderBottom = bottom;
+    }
+    if (left) {
+      this.borderLeft = left;
+    }
   }
 
   innerWidth() {
@@ -199,22 +207,22 @@ class Draw {
   }
 
   /*
-    txt: render text
-    box: DrawBox
-    attr: {
-      align: left | center | right
-      valign: top | middle | bottom
-      color: '#333333',
-      strike: false,
-      font: {
-        name: 'Arial',
-        size: 14,
-        bold: false,
-        italic: false,
+      txt: render text
+      box: DrawBox
+      attr: {
+        align: left | center | right
+        valign: top | middle | bottom
+        color: '#333333',
+        strike: false,
+        font: {
+          name: 'Arial',
+          size: 14,
+          bold: false,
+          italic: false,
+        }
       }
-    }
-    textWrap: text wrapping
-  */
+      textWrap: text wrapping
+    */
   text(mtxt, box, attr = {}, textWrap = true) {
     const { ctx } = this;
     const {
